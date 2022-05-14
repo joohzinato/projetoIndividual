@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    background-color: #59100A;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    height: 10.79136690647482vh;
+    background-color: #59100A;
+    width: 100%;
+    align-items: center;
+    color: #F27B13;
+    border-bottom: 2px solid #F27B13;
+    font-weight: 600;
+    overflow: hidden;
+    position: fixed;
+}
+
+header p {
+    font-size: 30px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 43.92386530014641vw;
+    font-size: 18px;
+    list-style: none;
+}
+
+li:hover {
+    background-color: #fa780623;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #F27B13;
+}
+
+
+
+/* BANNER */
+
+.banner {
+    background:
+        linear-gradient(to bottom,
+            rgb(26, 24, 29),
+            rgba(255, 170, 0, 0)),
+        url("./banner3.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 94.96402877697842vh;
+    border-bottom: 2px solid #F27B13;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner p {
+    color: white;
+    text-shadow: 2px 1px black;
+    font-size: 70px;
+    padding: 0 300px;
+    text-align: center;
+    font-family: 'Saira', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* CONTAINER GLOBAIS */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.container p {
+    font-size: 30px;
+    color: #F27B13;
+}
+
+.titulo {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.texto {
+
+    color: rgb(241, 230, 230);
+    text-align: justify;
+    font-weight: 300;
+}
+
+/* HISTÓRIA */
+
+
+#historia {
+    background-color: #59100A;
+}
+
+
+#historia h1 {
+    color: #F27B13;
+}
+
+
+#historia .texto {
+    color: rgb(241, 230, 230);
+}
+
+/* SOBRE */
+
+
+#sobre {
+    background-color: #F2A81D;
+}
+
+#sobre h1 {
+    color: #59100A;
+}
+
+
+#sobre .texto {
+    color: black;
+}
+
+/* CALCULADORA */
+
+#calculadora {
+    background-color: #F2A81D;
+}
+
+#calculadora h1 {
+    color: #59100A;
+}
+
+
+#calculadora .texto {
+    color: black;
+}
+
+/* CADASTRAR */
+
+#cadastrar {
+    background-color: #59100A;
+}
+
+#cadastrar h1 {
+    color: #F27B13;
+}
+
+
+#cadastrar .texto {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+.ipts_cadastrar {
+    /* background-color: black; */
+}
+
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 10.79136690647482vh;
+    background-color: #59100A;
+    width: 100%;
+    align-items: center;
+    color: #F27B13;
+    border-top: 2px solid #F27B13;
+    font-weight: 600;
+}
+
+#p_flooter {
+    display: flex;
+    text-align: center;
+
+}

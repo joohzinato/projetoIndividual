@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+    <title>Calculadora 1.0</title>
+</head>
+
+<body>
+
+    <div id="div_quantPessoas">
+        <h3>QUANTAS PESSOAS VÃO AO CHURRASCO?</h3>
+        <input id="ipt_quantPessoas" type="number" autofocus>
+        <button onclick="func_quantPessoas()">Prosseguir</button>
+    </div>
+
+    <div id="div_cardapioCarnes" style="display: none;">
+        <h3>QUAIS CARNES SERÃO SERVIDAS?</h3>
+        <h4>Boi</h4>
+        <label for="ipt_alcatra">Alcatra</label>
+        <input id="ipt_alcatra" type="checkbox"> <br>
+        <label for="ipt_picanha">Picanha</label>
+        <input id="ipt_picanha" type="checkbox"> <br>
+        <label for="ipt_maminha">Maminha</label>
+        <input id="ipt_maminha" type="checkbox"> <br>
+        <label for="ipt_fraldinha">Fraldinha</label>
+        <input id="ipt_fraldinha" type="checkbox"> <br>
+        <label for="ipt_contrafile">Contrafilé</label>
+        <input id="ipt_contrafile" type="checkbox">
+
+        <h4>Porco</h4>
+        <label for="ipt_pernil">Pernil</label>
+        <input id="ipt_pernil" type="checkbox"> <br>
+        <label for="ipt_lombo">Lombo</label>
+        <input id="ipt_lombo" type="checkbox"> <br>
+        <label for="ipt_panceta">Pacenta</label>
+        <input id="ipt_panceta" type="checkbox"> <br>
+        <label for="ipt_picanhaSuina">Picanha Suína</label>
+        <input id="ipt_picanhaSuina" type="checkbox"> <br>
+        <label for="ipt_costelinha">Costelinha</label>
+        <input id="ipt_costelinha" type="checkbox">
+
+        <h4>Frango</h4>
+        <label for="ipt_coxinhaAsa">Coxinha de asa</label>
+        <input id="ipt_coxinhaAsa" type="checkbox"> <br>
+        <label for="ipt_coracao">Coração</label>
+        <input id="ipt_coracao" type="checkbox"> <br>
+        <label for="ipt_asa">Asa</label>
+        <input id="ipt_asa" type="checkbox">
+
+        <h4>Linguiça e Outros</h4>
+        <label for="ipt_linguicaChurrasco">Linguiça para churrasco</label>
+        <input id="ipt_linguicaChurrasco" value="0.032" type="checkbox"> <br>
+        Linguiça toscana <input id="ipt_linguicaToscana" value="0.032" type="checkbox"> <br>
+        Queijo Coalho <input id="ipt_queijoCoalho" value="3" type="checkbox"> <br>
+        Salsichão <input id="ipt_salsichao" value="0.032" type="checkbox"> <br>
+        Pão de Alho <input id="ipt_paoAlho" value="3" type="checkbox"> <br> <br>
+        <button onclick="func_cardapioCarnes()">Prosseguir</button>
+
+    </div>
+
+    <div id="div_cardapioAcompanhamento" style="display: none;">
+        <h3>VOCÊ PENSOU EM ALGUM ACOMPANHAMENTO?</h3>
+        Arroz <input id="ipt_arroz" value="0.060" type="checkbox"> <br>
+        Maionese <input id="ipt_maionese" value="0.075" type="checkbox"> <br>
+        Vinagrete <input id="ipt_vinagrete" value="0.035" type="checkbox"> <br>
+        Farofa <input id="ipt_farofa" value="0.030" type="checkbox"> <br>
+        Limão <input id="ipt_limao" value="0.045" type="checkbox"> <br> <br>
+        <button onclick="func_cardapioAcompanhamento()">Prosseguir</button>
+    </div>
+
+    <div id="div_cardapioSuprimentos" style="display: none;">
+        <h3>NÃO ESQUEÇA DOS SUPRIMENTOS</h3>
+        Carvão <input id="ipt_carvao" value="1" type="checkbox"> <br>
+        Pratos descartáveis <input id="ipt_pratos" value="2" type="checkbox"> <br>
+        Copos descartáveis <input id="ipt_copos" value="3" type="checkbox"> <br>
+        Guardanapos <input id="ipt_guardanapos" value="10" type="checkbox"> <br>
+        Talheres descartáveis <input id="ipt_talheres" value="2" type="checkbox"> <br>
+        Sal grosso <input id="ipt_salGrosso" value="0.050" type="checkbox"> <br> <br>
+        <button onclick="func_cardapioSuprimentos()">Prosseguir</button>
+    </div>
+
+    <div id="div_cardapioBebidas" style="display: none;">
+        <h3>QUAIS BEBIDAS DESEJA SERVIR?</h3>
+        Cerveja <input id="ipt_cerveja" value="8" type="checkbox"> <br>
+        Refrigerante <input id="ipt_refrigerante" value="2" type="checkbox"> <br>
+        Água <input id="ipt_agua" value="1" type="checkbox"> <br>
+        Vodka <input id="ipt_vodka" value="1" type="checkbox"> <br>
+        Suco <input id="ipt_suco" value="1" type="checkbox"> <br>
+        Cachaça <input id="ipt_cachaca" value="1" type="checkbox"><br> <br>
+        <button onclick="func_cardapioBebidas()">Finalizar</button>
+    </div>
+
+    <div id="div_final" style="display: none;">
+        <div id="div_mensagem"></div>
+        <button onclick="func_novoCalculo()">Fazer novo Calculo</button>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    var quantPessoas = 0;
+
+    function func_quantPessoas() {
+
+        quantPessoas = Number(ipt_quantPessoas.value);
+
+        if (quantPessoas <= 0) {
+
+            alert('Informe a quantidade de pessoas correto - A quantidade de pessoas tem que ser acima de 0')
+
+        } else {
+
+            div_quantPessoas.style.display = 'none';
+            div_cardapioCarnes.style.display = 'block';
+
+        }
+
+    }
+
+    var alcatra = 0;
+    var picanha = 0;
+    var maminha = 0;
+    var fraldinha = 0;
+    var contrafile = 0;
+    var pernil = 0;
+    var lombo = 0;
+    var panceta = 0;
+    var picanhaSuina = 0;
+    var costelinha = 0;
+    var coxinhaAsa = 0;
+    var coracao = 0;
+    var asa = 0;
+    var linguicaChurrasco = 0;
+    var linguicaToscana = 0;
+    var queijoCoalho = 0;
+    var salsichao = 0;
+    var paoAlho = 0;
+
+
+    function func_cardapioCarnes() {
+
+        if (ipt_alcatra.checked === true) {
+
+            alcatra = 0.048 * quantPessoas;
+
+        }
+
+        if (ipt_picanha.checked === true) {
+
+            picanha = 0.048 * quantPessoas;
+
+        }
+
+        if (ipt_maminha.checked === true) {
+
+            maminha = 0.048 * quantPessoas;
+
+        }
+
+        if (ipt_fraldinha.checked === true) {
+
+            fraldinha = 0.048 * quantPessoas;
+        }
+
+        if (ipt_contrafile.checked === true) {
+
+            contrafile = 0.048 * quantPessoas;
+
+        }
+
+        if (ipt_pernil.checked === true) {
+
+            pernil = 0.032 * quantPessoas;
+
+        }
+
+        if (ipt_lombo.checked === true) {
+
+            lombo = 0.032 * quantPessoas;
+
+        }
+
+        if (ipt_panceta.checked === true) {
+
+            panceta = 0.032 * quantPessoas;
+
+        }
+
+        if (ipt_picanhaSuina.checked === true) {
+
+            picanhaSuina = 0.032 * quantPessoas;
+
+        }
+
+        if (ipt_costelinha.checked === true) {
+
+            costelinha = 0.032 * quantPessoas;
+
+        }
+
+        if (ipt_coxinhaAsa.checked === true) {
+
+            coxinhaAsa = 0.032 * quantPessoas;
+
+        }
+
+        if (ipt_coracao.checked === true) {
+
+            coracao = 0.032 * quantPessoas;
+
+        }
+
+        if (ipt_asa.checked === true) {
+
+            asa = 0.032 * quantPessoas;
+
+        }
+
+
+
+        linguicaChurrasco = Number(ipt_linguicaChurrasco.value) * quantPessoas;
+        linguicaToscana = Number(ipt_linguicaToscana.value) * quantPessoas;
+        queijoCoalho = Number(ipt_queijoCoalho.value) * quantPessoas;
+        salsichao = Number(ipt_salsichao.value) * quantPessoas;
+        paoAlho = Number(ipt_paoAlho.value) * quantPessoas;
+
+        div_cardapioCarnes.style.display = 'none';
+        div_cardapioAcompanhamento.style.display = 'block';
+
+    }
+
+    var arroz = 0;
+    var maionese = 0;
+    var vinagrete = 0;
+    var farofa = 0;
+    var limao = 0;
+
+    function func_cardapioAcompanhamento() {
+
+        arroz = Number(ipt_arroz.value) * quantPessoas;
+        maionese = Number(ipt_maionese.value) * quantPessoas;
+        vinagrete = Number(ipt_vinagrete.value) * quantPessoas;
+        farofa = Number(ipt_farofa.value) * quantPessoas;
+        limao = Number(ipt_limao.value) * quantPessoas;
+
+        div_cardapioAcompanhamento.style.display = 'none';
+        div_cardapioSuprimentos.style.display = 'block';
+
+    }
+
+    var carvao = 0;
+    var pratos = 0;
+    var copos = 0;
+    var guardanapos = 0;
+    var talheres = 0;
+    var salGrosso = 0;
+
+    function func_cardapioSuprimentos() {
+
+        carvao = Number(ipt_carvao.value) * quantPessoas;
+        pratos = Number(ipt_pratos.value) * quantPessoas;
+        copos = Number(ipt_copos.value) * quantPessoas;
+        guardanapos = Number(ipt_guardanapos.value) * quantPessoas;
+        talheres = Number(ipt_talheres.value) * quantPessoas;
+        salGrosso = Number(ipt_salGrosso.value) * quantPessoas;
+
+        div_cardapioSuprimentos.style.display = 'none';
+        div_cardapioBebidas.style.display = 'block';
+
+    }
+
+    var cerveja = 0;
+    var refrigerante = 0;
+    var agua = 0;
+    var vodka = 0;
+    var suco = 0;
+    var cachaca = 0;
+
+    function func_cardapioBebidas() {
+
+        cerveja = Number(ipt_cerveja.value) * quantPessoas;
+        refrigerante = Number(ipt_refrigerante.value) * quantPessoas;
+        agua = Number(ipt_agua.value) * quantPessoas;
+        vodka = Number(ipt_vodka.value) * quantPessoas;
+        suco = Number(ipt_suco.value) * quantPessoas;
+        cachaca = Number(ipt_cachaca.value) * quantPessoas;
+
+        div_cardapioBebidas.style.display = 'none';
+        div_final.style.display = 'block';
+
+        if (ipt_alcatra.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Alcatra:</b> ${alcatra.toFixed(2)}Kg // Por pessoa: ${alcatra.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        } else {
+
+            div_mensagem.innerHTML += ``;
+
+
+        }
+
+        if (ipt_picanha.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Picanha:</b> ${picanha.toFixed(2)}Kg Por pessoa: ${picanha.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        }
+
+        if (ipt_maminha.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Maminha:</b> ${maminha.toFixed(2)}Kg // Por pessoa: ${maminha.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        }
+
+        if (ipt_fraldinha.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Fraldinha:</b> ${fraldinha.toFixed(2)}Kg // Por pessoa: ${fraldinha.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        }
+
+        if (ipt_contrafile.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Contrafilé:</b> ${contrafile.toFixed(2)}Kg // Por pessoa: ${contrafile.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        }
+
+        if (ipt_pernil.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Pernil:</b> ${pernil.toFixed(2)}Kg // Por pessoa: ${pernil.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        }
+
+        if (ipt_lombo.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Lombo:</b> ${lombo.toFixed(2)}Kg // Por pessoa: ${lombo.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        }
+
+        if (ipt_panceta.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Pacenta:</b> ${panceta.toFixed(2)}Kg // Por pessoa: ${panceta.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        }
+
+        if (ipt_picanhaSuina.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Picanha Suína:</b> ${picanhaSuina.toFixed(2)}Kg // Por pessoa: ${picanhaSuina.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        }
+
+        if (ipt_costelinha.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Costelinha:</b> ${costelinha.toFixed(2)}Kg // Por pessoa: ${costelinha.toFixed(2) / quantPessoas}Kg   <br>`;
+
+        }
+
+        if (ipt_coxinhaAsa.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Coxinha de Asa:</b> ${coxinhaAsa.toFixed(2)}Kg // Por pessoa: ${coxinhaAsa.toFixed(2) / quantPessoas}Kg   <br>`;
+
+
+        }
+
+        if (ipt_coracao.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Coração:</b> ${coracao.toFixed(2)}Kg // Por pessoa: ${coracao.toFixed(2) / quantPessoas}Kg   <br>`;
+
+
+        }
+
+        if (ipt_asa.checked === true) {
+
+            div_mensagem.innerHTML += `<b>Asa:</b> ${asa.toFixed(2)}Kg // Por pessoa: ${asa.toFixed(2) / quantPessoas}Kg   <br>`;
+
+
+        }
+
+    }
+
+    function func_novoCalculo() {
+
+        var quantPessoas = 0;
+        var alcatra = 0;
+        var picanha = 0;
+        var maminha = 0;
+        var fraldinha = 0;
+        var contrafile = 0;
+        var pernil = 0;
+        var lombo = 0;
+        var panceta = 0;
+        var picanhaSuina = 0;
+        var costelinha = 0;
+        var coxinhaAsa = 0;
+        var coracao = 0;
+        var asa = 0;
+        var linguicaChurrasco = 0;
+        var linguicaToscana = 0;
+        var queijoCoalho = 0;
+        var salsichao = 0;
+        var paoAlho = 0;
+        var arroz = 0;
+        var maionese = 0;
+        var vinagrete = 0;
+        var farofa = 0;
+        var limao = 0;
+        var carvao = 0;
+        var pratos = 0;
+        var copos = 0;
+        var guardanapos = 0;
+        var talheres = 0;
+        var salGrosso = 0;
+        var cerveja = 0;
+        var refrigerante = 0;
+        var agua = 0;
+        var vodka = 0;
+        var suco = 0;
+        var cachaca = 0;
+
+        div_final.style.display = 'none';
+        div_quantPessoas.style.display = 'block';
+        div_mensagem.innerHTML = (``);
+
+
+
+    }
+
+</script>
