@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,17 @@
 
     <title>Churrasquinho | Calculadora</title>
 </head>
-<body>
 
+<body>
     <header>
         <p><a href="index.html">CHURRASQUINHO</a></p>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="./index.html#historia">História</a></li>
             <li><a href="./index.html#sobre">Sobre</a></li>
-            <li><a href="simulador.html">Simulador</a></li>
+            <li><a href="simulador.html">Calculadora</a></li>
+            <li>|</li>
+            <li><a href="./index.html#cadastrar">Saiba mais</a></li>
         </ul>
     </header>
 
@@ -24,37 +27,105 @@
         <div id="calculadora">
             <div class="container">
                 <h1 class="titulo">CALCULADORA DE CHURRASCO</h1>
-                <img src="simulador.png">
                 <div class="card_calculadora">
-                    <p class="texto">O churrasco chegou ao Brasil durante o século XVII, junto com os Setes Povos das
-                        Missões — sociedade fundada por jesuítas no Rio Grande a fim de reunir indígenas na missão de
-                        catequizá-los. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem est
-                        unde
-                        atque impedit provident delectus, odit repellat adipisci vero ipsa cumque, consectetur maxime
-                        dolorum tempore. Provident iure doloremque adipisci. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Amet, similique animi illo, repellendus totam dolorem, aspernatur veniam
-                        suscipit
-                        commodi doloribus vel reprehenderit. Laborum suscipit, quod nesciunt doloribus illo officia
-                        nisi? O churrasco chegou ao Brasil durante o século XVII, junto com os Setes Povos das
-                        Missões — sociedade fundada por jesuítas no Rio Grande a fim de reunir indígenas na missão de
-                        catequizá-los. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem est
-                        unde
-                        atque impedit provident delectus, odit repellat adipisci vero ipsa cumque, consectetur maxime
-                        dolorum tempore. Provident iure doloremque adipisci. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Amet, similique animi illo, repellendus totam dolorem, aspernatur veniam
-                        suscipit
-                        commodi doloribus vel reprehenderit. Laborum suscipit, quod nesciunt doloribus illo officia
-                        nisi?
-                    </p>
+                    <div id="parte1">
+                        <img class="icone" src="./pessoa.png">
+                        <p class="texto">QUANTAS PESSOAS VÃO AO CHURRASCO?</p>
+                        <input type="text" id="ipts_calculadora">
+                        <button onclick="func_confirmar()">Próximo</button>
+                    </div>
+                    <div id="parte2">
+                        <img class="icone" src="./carne.png">
+                        <p class="texto">QUAIS CARNES SERÃO SERVIDAS?</p>
+                        <div id="op_carnes">
+                            <p class="texto" onclick="func_boi()">BOI</p>
+                            <p class="texto" onclick="func_porco()">PORCO</p>
+                            <p class="texto" onclick="func_frango()">FRANGO</p>
+                            <p class="texto" onclick="func_linguica()">LINGUIÇA E OUTROS</p>
+                        </div>
+                        <div id="boi" style="display: none ;">
+                            <label for="ipt_alcatra">Alcatra</label>
+                            <input id="ipt_alcatra" type="checkbox"> <br>
+                            <label for="ipt_picanha">Picanha</label>
+                            <input id="ipt_picanha" type="checkbox"> <br>
+                            <label for="ipt_maminha">Maminha</label>
+                            <input id="ipt_maminha" type="checkbox"> <br>
+                            <label for="ipt_fraldinha">Fraldinha</label>
+                            <input id="ipt_fraldinha" type="checkbox"> <br>
+                            <label for="ipt_contrafile">Contrafilé</label>
+                            <input id="ipt_contrafile" type="checkbox">
+                        </div>
+                        <div id="porco" style="display: none ;">
+                            <label for="ipt_pernil">Pernil</label>
+                            <input id="ipt_pernil" type="checkbox"> <br>
+                            <label for="ipt_lombo">Lombo</label>
+                            <input id="ipt_lombo" type="checkbox"> <br>
+                            <label for="ipt_panceta">Pacenta</label>
+                            <input id="ipt_panceta" type="checkbox"> <br>
+                            <label for="ipt_picanhaSuina">Picanha Suína</label>
+                            <input id="ipt_picanhaSuina" type="checkbox"> <br>
+                            <label for="ipt_costelinha">Costelinha</label>
+                            <input id="ipt_costelinha" type="checkbox">
+                        </div>
+                        <div id="frango" style="display: none;">
+                            <label for="ipt_coxinhaAsa">Coxinha de asa</label>
+                            <input id="ipt_coxinhaAsa" type="checkbox"> <br>
+                            <label for="ipt_coracao">Coração</label>
+                            <input id="ipt_coracao" type="checkbox"> <br>
+                            <label for="ipt_asa">Asa</label>
+                            <input id="ipt_asa" type="checkbox">
+                        </div>
+                        <button onclick="func_confirmar()">Próximo</button>
+                    </div>
+                    <div id="parte3">
+
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
 
 
     <footer>
         <p id="p_flooter">Feito por: João Víctor Zinatto Sobral <br> SPTech - Projeto Individual - 1º semestre</p>
     </footer>
-    
+
 </body>
+
 </html>
+
+<script>
+
+    function func_confirmar() {
+
+        parte1.style.display = 'none'
+        parte2.style.display = 'block'
+
+    }
+
+    function func_boi() {
+
+        boi.style.display = 'block'
+        porco.style.display = 'none'
+        frango.style.display = 'none'
+
+    }
+
+    function func_porco() {
+
+        boi.style.display = 'none'
+        porco.style.display = 'block'
+        frango.style.display = 'none'
+
+    }
+
+    function func_frango() {
+
+        boi.style.display = 'none'
+        porco.style.display = 'none'
+        frango.style.display = 'block'
+        
+    }
+
+
+
+</script>

@@ -28,7 +28,7 @@ ul {
     justify-content: space-evenly;
     flex-direction: row;
     width: 43.92386530014641vw;
-    font-size: 18px;
+    font-size: 20px;
     list-style: none;
 }
 
@@ -67,7 +67,6 @@ a {
     font-size: 70px;
     padding: 0 300px;
     text-align: center;
-    font-family: 'Saira', sans-serif;
     font-style: normal;
     font-weight: 400;
 }
@@ -144,10 +143,43 @@ a {
     color: #59100A;
 }
 
-
 #calculadora .texto {
     color: black;
 }
+
+.icone {
+    width: 14.641288433382138vw
+}
+
+#calculadora #parte1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calculadora #parte2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+#op_carnes {
+    width: 800px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+
+#ipts_calculadora {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
 
 /* CADASTRAR */
 
@@ -161,17 +193,16 @@ a {
 
 
 #cadastrar .texto {
-    color: black;
+    color: white;
     font-size: 20px;
-    font-weight: 600;
-    
+    /* font-weight: 600; */
+
 }
 
 .ipts_cadastrar {
-    /* background-color: black; */
+    background-color: #59100A;
+    border: 1px solid black;
 }
-
-
 
 /* FOOTER */
 
