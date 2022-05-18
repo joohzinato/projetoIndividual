@@ -51,7 +51,7 @@ a {
         linear-gradient(to bottom,
             rgb(26, 24, 29),
             rgba(255, 170, 0, 0)),
-        url("./banner3.jpeg");
+        url("./banner.jpeg");
     display: flex;
     justify-content: center;
     align-items: center;
