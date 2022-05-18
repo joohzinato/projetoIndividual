@@ -1,6 +1,11 @@
 body {
     margin: 0;
     background-color: #59100A;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -42,8 +47,6 @@ a {
     color: #F27B13;
 }
 
-
-
 /* BANNER */
 
 .banner {
@@ -51,7 +54,7 @@ a {
         linear-gradient(to bottom,
             rgb(26, 24, 29),
             rgba(255, 170, 0, 0)),
-        url("./banner.jpeg");
+        url("/img/banner.jpeg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,53 +134,6 @@ a {
 
 #sobre .texto {
     color: black;
-}
-
-/* CALCULADORA */
-
-#calculadora {
-    background-color: #F2A81D;
-}
-
-#calculadora h1 {
-    color: #59100A;
-}
-
-#calculadora .texto {
-    color: black;
-}
-
-.icone {
-    width: 14.641288433382138vw
-}
-
-#calculadora #parte1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#calculadora #parte2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-}
-
-#op_carnes {
-    width: 800px;
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-
-#ipts_calculadora {
-    width: 100px;
-    height: 50px;
-    font-size: 30px;
-    border-radius: 10px;
 }
 
 

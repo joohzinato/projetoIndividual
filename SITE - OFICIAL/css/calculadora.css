@@ -1,0 +1,46 @@
+/* CALCULADORA */
+
+#calculadora {
+    background-color: #F2A81D;
+}
+
+#calculadora h1 {
+    color: #59100A;
+}
+
+#calculadora .texto {
+    color: black;
+}
+
+.icone {
+    width: 14.641288433382138vw
+}
+
+#calculadora #parte1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calculadora #parte2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+#op_carnes {
+    width: 800px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+
+#ipts_calculadora {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+}
