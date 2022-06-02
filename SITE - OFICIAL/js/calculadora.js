@@ -15,6 +15,8 @@ function func_confirmar1() {
         display_parte3.style.display = 'none'
         display_parte4.style.display = 'none'
         display_parte5.style.display = 'none'
+        // display_parte6.style.display = 'none'
+
 
     }
 
@@ -65,6 +67,8 @@ function func_confirmar2() {
     display_parte3.style.display = 'block'
     display_parte4.style.display = 'none'
     display_parte5.style.display = 'none'
+    // display_parte6.style.display = 'none'
+
 
     if (ipt_alcatra.checked === true) {
         alcatra = 0.048 * quantPessoas;
@@ -140,6 +144,8 @@ function func_confirmar2() {
 
 }
 
+var arroz, maionese, vinagrete, farofa, limao = 0
+
 function func_confirmar3() {
 
     display_parte1.style.display = 'none'
@@ -147,8 +153,31 @@ function func_confirmar3() {
     display_parte3.style.display = 'none'
     display_parte4.style.display = 'block'
     display_parte5.style.display = 'none'
+    // display_parte6.style.display = 'none'
+
+    if (ipt_arroz.checked === true) {
+        arroz = 0.070 * quantPessoas;
+    }
+
+    if (ipt_maionese.checked === true) {
+        maionese = 0.080 * quantPessoas;
+    }
+
+    if (ipt_vinagrete.checked === true) {
+        vinagrete = 0.070 * quantPessoas;
+    }
+
+    if (ipt_farofa.checked === true) {
+        farofa = 0.030 * quantPessoas;
+    }
+
+    if (ipt_limao.checked === true) {
+        limao = 0.045 * quantPessoas;
+    }
 
 }
+
+var carvao, prato, copo, guardanapo, talheres, salGrosso = 0;
 
 function func_confirmar4() {
 
@@ -157,5 +186,37 @@ function func_confirmar4() {
     display_parte3.style.display = 'none'
     display_parte4.style.display = 'none'
     display_parte5.style.display = 'block'
+    // display_parte6.style.display = 'none'
+
+    if (ipt_carvao.checked === true) {
+        carvao = 0.5 * quantPessoas;
+    }
+
+    if (ipt_pratos.checked === true) {
+        prato = 2 * quantPessoas;
+    }
+
+    if (ipt_guardanapos.checked === true) {
+        guardanapo = 10 * quantPessoas;
+    }
+
+    if (ipt_talheres.checked === true) {
+        talheres = 2 * quantPessoas;
+    }
+
+    if (ipt_salGrosso.checked === true) {
+        salGrosso = 0.050 * quantPessoas;
+    }
+
+}
+
+function func_confirmar5() {
+
+    display_parte1.style.display = 'none'
+    display_parte2.style.display = 'none'
+    display_parte3.style.display = 'none'
+    display_parte4.style.display = 'none'
+    display_parte5.style.display = 'none'
+    // display_parte6.style.display = 'block'
 
 }
