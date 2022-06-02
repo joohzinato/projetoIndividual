@@ -23,10 +23,15 @@
 }
 
 #calculadora #parte2 {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+#calculadora #parte3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: none;
 }
 
 #op_carnes {
@@ -35,6 +40,7 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    cursor: pointer;
 }
 
 
