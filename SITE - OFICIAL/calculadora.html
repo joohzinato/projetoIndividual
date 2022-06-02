@@ -36,7 +36,7 @@
                             <img class="icone" src="/img/pessoa.png">
                             <p class="texto">QUANTAS PESSOAS VÃO AO CHURRASCO?</p>
                             <input type="text" id="ipt_quantPessoas">
-                            <button onclick="func_confirmar1()">Próximo</button>
+                            <button class="buttonCalculadora" onclick="func_confirmar1()">Próximo</button>
                         </div>
                     </div>
 
@@ -140,7 +140,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button onclick="func_confirmar2()">Prosseguir</button>
+                            <button class="buttonCalculadora" onclick="func_confirmar2()">Prosseguir</button>
                         </div>
                     </div>
 
@@ -149,41 +149,62 @@
                             <img class="icone" src="/img/salada.png">
                             <p class="texto">VOCÊ PENSOU EM ALGUM ACOMPANHAMENTO?</p>
                             <div class="opcoes">
-                                <label for="ipt_arroz">Arroz</label>
-                                <input id="ipt_arroz" type="checkbox"> <br>
-                                <label for="ipt_maionese">Maionese</label>
-                                <input id="ipt_maionese" type="checkbox"> <br>
-                                <label for="ipt_vinagrete">Vinagrete</label>
-                                <input id="ipt_vinagrete" type="checkbox"> <br>
-                                <label for="ipt_farofa">Farofa</label>
-                                <input id="ipt_farofa" type="checkbox"> <br>
-                                <label for="ipt_limao">Limão</label>
-                                <input id="ipt_limao" type="checkbox"> <br> <br>
+                                <div class="check">
+                                    <label for="ipt_arroz">Arroz</label>
+                                    <input id="ipt_arroz" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_maionese">Maionese</label>
+                                    <input id="ipt_maionese" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_vinagrete">Vinagrete</label>
+                                    <input id="ipt_vinagrete" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_farofa">Farofa</label>
+                                    <input id="ipt_farofa" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_limao">Limão</label>
+                                    <input id="ipt_limao" type="checkbox"> <br> <br>
+                                </div>
                             </div>
-                            <button onclick="func_confirmar3()">Prosseguir</button>
+                            <button class="buttonCalculadora" onclick="func_confirmar3()">Prosseguir</button>
                         </div>
                     </div>
-
 
                     <div id="display_parte4" style="display: none;">
                         <div class="partes">
                             <img class="icone" src="/img/copo-de-agua.png">
                             <p class="texto">NÃO ESQUEÇA DOS SUPRIMENTOS</p>
                             <div class="opcoes">
-                                <label for="ipt_carvao">Carvão </label>
-                                <input id="ipt_carvao" type="checkbox"> <br>
-                                <label for="ipt_pratos">Pratos descartáveis</label>
-                                <input id="ipt_pratos" type="checkbox"> <br>
-                                <label for="ipt_copos">Copos descartáveis</label>
-                                <input id="ipt_copos" type="checkbox"> <br>
-                                <label for="ipt_guardanapos">Guardanapos</label>
-                                <input id="ipt_guardanapos" type="checkbox"> <br>
-                                <label for="ipt_talheres">Talheres descartáveis</label>
-                                <input id="ipt_talheres" type="checkbox"> <br>
-                                <label for="ipt_salGrosso">Sal grosso</label>
-                                <input id="ipt_salGrosso" type="checkbox"> <br> <br>
+                                <div class="check">
+                                    <label for="ipt_carvao">Carvão </label>
+                                    <input id="ipt_carvao" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_pratos">Pratos descartáveis</label>
+                                    <input id="ipt_pratos" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_copos">Copos descartáveis</label>
+                                    <input id="ipt_copos" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_guardanapos">Guardanapos</label>
+                                    <input id="ipt_guardanapos" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_talheres">Talheres descartáveis</label>
+                                    <input id="ipt_talheres" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_salGrosso">Sal grosso</label>
+                                    <input id="ipt_salGrosso" type="checkbox"> <br> <br>
+                                </div>
                             </div>
-                            <button onclick="func_confirmar4()">Prosseguir</button>
+                            <button class="buttonCalculadora" onclick="func_confirmar4()">Prosseguir</button>
                         </div>
                     </div>
 
@@ -192,20 +213,32 @@
                             <img class="icone" src="/img/refrigerante.png">
                             <p class="texto">QUAIS BEBIDAS DESEJA SERVIR?</p>
                             <div class="opcoes">
-                                <label for="ipt_cerveja">Cerveja</label>
-                                <input id="ipt_cerveja" type="checkbox"> <br>
-                                <label for="ipt_refrigerante">Refrigerante</label>
-                                <input id="ipt_refrigerante" type="checkbox"> <br>
-                                <label for="ipt_agua">Água</label>
-                                <input id="ipt_agua" type="checkbox"> <br>
-                                <label for="ipt_vodka">Vodka</label>
-                                <input id="ipt_vodka" type="checkbox"> <br>
-                                <label for="ipt_suco">Suco</label>
-                                <input id="ipt_suco" type="checkbox"> <br>
-                                <label for="ipt_cachaca">Cachaça</label>
-                                <input id="ipt_cachaca" type="checkbox"><br> <br>
+                                <div class="check">
+                                    <label for="ipt_cerveja">Cerveja</label>
+                                    <input id="ipt_cerveja" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_refrigerante">Refrigerante</label>
+                                    <input id="ipt_refrigerante" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_agua">Água</label>
+                                    <input id="ipt_agua" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_vodka">Vodka</label>
+                                    <input id="ipt_vodka" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_suco">Suco</label>
+                                    <input id="ipt_suco" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_cachaca">Cachaça</label>
+                                    <input id="ipt_cachaca" type="checkbox"><br> <br>
+                                </div>
                             </div>
-                            <button onclick="func_confirmar5()">Finalizar</button>
+                            <button class="buttonCalculadora" onclick="func_confirmar5()">Finalizar</button>
                         </div>
                     </div>
                 </div>

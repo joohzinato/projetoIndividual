@@ -37,6 +37,11 @@
     align-items: center;
 }
 
+#calculadora .buttonCalculadora {
+    margin-top: 20px;
+
+}
+
 /* CARNES */
 
 #op_carnes {
