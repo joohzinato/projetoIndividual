@@ -8,31 +8,31 @@
     color: #59100A;
 }
 
+/* GLOBAIS */
+
 #calculadora .texto {
     color: black;
 }
 
-.icone {
+#calculadora .icone {
     width: 14.641288433382138vw
 }
 
-#calculadora #parte1 {
+#calculadora .opcoes {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content: space-between;
+    width: 700px;
+}
+
+#calculadora .partes {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#calculadora #parte2 {
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-}
-
-#calculadora #parte3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* CARNES */
 
 #op_carnes {
     width: 800px;

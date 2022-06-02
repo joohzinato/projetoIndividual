@@ -29,14 +29,18 @@
             <div class="container">
                 <h1 class="titulo">CALCULADORA DE CHURRASCO</h1>
                 <div class="card_calculadora">
-                    <div id="parte1">
-                        <img class="icone" src="/img/pessoa.png">
-                        <p class="texto">QUANTAS PESSOAS VÃO AO CHURRASCO?</p>
-                        <input type="text" id="ipt_quantPessoas">
-                        <button onclick="func_confirmar()">Próximo</button>
+
+                    <div id="display_parte1" style="display: block;">
+                        <div class="partes">
+                            <img class="icone" src="/img/pessoa.png">
+                            <p class="texto">QUANTAS PESSOAS VÃO AO CHURRASCO?</p>
+                            <input type="text" id="ipt_quantPessoas">
+                            <button onclick="func_confirmar()">Próximo</button>
+                        </div>
                     </div>
+
                     <div id="display_parte2" style="display: none;">
-                        <div id="parte2">
+                        <div class="partes">
                             <img class="icone" src="/img/carne.png">
                             <p class="texto">QUAIS CARNES SERÃO SERVIDAS?</p>
                             <div id="op_carnes">
@@ -70,46 +74,55 @@
                                 <input id="ipt_costelinha" type="checkbox">
                             </div>
                             <div id="frango" style="display: none;">
-                                <label for="ipt_coxinhaAsa">Coxinha de asa</label>
-                                <input id="ipt_coxinhaAsa" type="checkbox"> <br>
-                                <label for="ipt_coracao">Coração</label>
-                                <input id="ipt_coracao" type="checkbox"> <br>
-                                <label for="ipt_asa">Asa</label>
-                                <input id="ipt_asa" type="checkbox">
+                                <div class="opcoes">
+                                    <label for="ipt_coxinhaAsa">Coxinha de asa</label>
+                                    <input id="ipt_coxinhaAsa" type="checkbox"> <br>
+                                    <label for="ipt_coracao">Coração</label>
+                                    <input id="ipt_coracao" type="checkbox"> <br>
+                                    <label for="ipt_asa">Asa</label>
+                                    <input id="ipt_asa" type="checkbox">
+                                </div>
                             </div>
                             <div id="linguicaOutros" style="display: none;">
-                                <label for="ipt_linguicaChurrasco">Linguiça para churrasco</label>
-                                <input id="ipt_linguicaChurrasco" type="checkbox"> <br>
-                                <label for="ipt_linguicaToscana">Linguiça toscana</label>
-                                <input id="ipt_linguicaToscana" type="checkbox"> <br>
-                                <label for="ipt_queijoCoalho">Queijo Coalho</label>
-                                <input id="ipt_queijoCoalho" type="checkbox"> <br>
-                                <label for="ipt_salsichao">Salsichão</label>
-                                <input id="ipt_salsichao" type="checkbox"> <br>
-                                <label for="ipt_paoAlho">Pão de Alho</label>
-                                <input id="ipt_paoAlho" type="checkbox"> <br> <br>
+                                <div class="opcoes">
+                                    <label for="ipt_linguicaChurrasco">Linguiça para churrasco</label>
+                                    <input id="ipt_linguicaChurrasco" type="checkbox"> <br>
+                                    <label for="ipt_linguicaToscana">Linguiça toscana</label>
+                                    <input id="ipt_linguicaToscana" type="checkbox"> <br>
+                                    <label for="ipt_queijoCoalho">Queijo Coalho</label>
+                                    <input id="ipt_queijoCoalho" type="checkbox"> <br>
+                                    <label for="ipt_salsichao">Salsichão</label>
+                                    <input id="ipt_salsichao" type="checkbox"> <br>
+                                    <label for="ipt_paoAlho">Pão de Alho</label>
+                                    <input id="ipt_paoAlho" type="checkbox"> <br> <br>
+                                </div>
                             </div>
                             <button onclick="func_confirmar2()">Próximo</button>
                         </div>
                     </div>
 
                     <div id="display_parte3" style="display: none;">
-                        <div id="parte3">
-                            <h3>VOCÊ PENSOU EM ALGUM ACOMPANHAMENTO?</h3>
-                            <label for="ipt_arroz">Arroz</label>
-                            <input id="ipt_arroz" type="checkbox"> <br>
-                            <label for="ipt_maionese">Maionese</label>
-                            <input id="ipt_maionese" type="checkbox"> <br>
-                            <label for="ipt_vinagrete">Vinagrete</label>
-                            <input id="ipt_vinagrete" type="checkbox"> <br>
-                            <label for="ipt_farofa">Farofa</label>
-                            <input id="ipt_farofa" type="checkbox"> <br>
-                            <label for="ipt_limao">Limão</label>
-                            <input id="ipt_limao" type="checkbox"> <br> <br>
+                        <div class="partes">
+                            <img class="icone" src="/img/salada.png">
+                            <p class="texto">VOCÊ PENSOU EM ALGUM ACOMPANHAMENTO?</p>
+                            <div class="opcoes">
+                                <label for="ipt_arroz">Arroz</label>
+                                <input id="ipt_arroz" type="checkbox"> <br>
+                                <label for="ipt_maionese">Maionese</label>
+                                <input id="ipt_maionese" type="checkbox"> <br>
+                                <label for="ipt_vinagrete">Vinagrete</label>
+                                <input id="ipt_vinagrete" type="checkbox"> <br>
+                                <label for="ipt_farofa">Farofa</label>
+                                <input id="ipt_farofa" type="checkbox"> <br>
+                                <label for="ipt_limao">Limão</label>
+                                <input id="ipt_limao" type="checkbox"> <br> <br>
+                            </div>
                             <button onclick="func_confirmar3()">Prosseguir</button>
                         </div>
                     </div>
                 </div>
+
+
             </div>
     </main>
 
@@ -136,7 +149,7 @@
 
         } else {
 
-            parte1.style.display = 'none'
+            display_parte1.style.display = 'none'
             display_parte2.style.display = 'block'
             display_parte3.style.display = 'none'
 
@@ -184,6 +197,7 @@
 
     function func_confirmar2() {
 
+        display_parte1.style.display = 'none'
         display_parte2.style.display = 'none'
         display_parte3.style.display = 'block'
 
