@@ -135,11 +135,25 @@ function func_confirmar2() {
         asa = 0.032 * quantPessoas;
     }
 
-    if (ipt_asa.checked === true) {
-        asa = 0.032 * quantPessoas;
+    if (ipt_linguicaChurrasco.checked === true) {
+        linguicaChurrasco = 0.032 * quantPessoas;
     }
 
-    console.log(alcatra)
+    if (ipt_linguicaToscana.checked === true) {
+        linguicaToscana = 0.032 * quantPessoas;
+    }
+
+    if (ipt_queijoCoalho.checked === true) {
+        queijoCoalho = 2 * quantPessoas;
+    }
+
+    if (ipt_salsichao.checked === true) {
+        salsichao = 0.032 * quantPessoas;
+    }
+
+    if (ipt_paoAlho.checked === true) {
+        paoAlho = 2 * quantPessoas;
+    }
 
 }
 
