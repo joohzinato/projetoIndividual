@@ -35,7 +35,7 @@
                             <img class="icone" src="/img/pessoa.png">
                             <p class="texto">QUANTAS PESSOAS VÃO AO CHURRASCO?</p>
                             <input type="text" id="ipt_quantPessoas">
-                            <button onclick="func_confirmar()">Próximo</button>
+                            <button onclick="func_confirmar1()">Próximo</button>
                         </div>
                     </div>
 
@@ -144,6 +144,28 @@
                     </div>
                 </div>
             </div>
+            <div id="display_parte5" style="display: none;">
+                <div class="partes">
+                    <img class="icone" src="/img/refrigerante.png">
+                    <p class="texto">QUAIS BEBIDAS DESEJA SERVIR?</p>
+                    <div class="opcoes">
+                        <label for="ipt_cerveja">Cerveja</label>
+                        <input id="ipt_cerveja" type="checkbox"> <br>
+                        <label for="ipt_refrigerante">Refrigerante</label>
+                        <input id="ipt_refrigerante" type="checkbox"> <br>
+                        <label for="ipt_agua">Água</label>
+                        <input id="ipt_agua" type="checkbox"> <br>
+                        <label for="ipt_vodka">Vodka</label>
+                        <input id="ipt_vodka" type="checkbox"> <br>
+                        <label for="ipt_suco">Suco</label>
+                        <input id="ipt_suco" type="checkbox"> <br>
+                        <label for="ipt_cachaca">Cachaça</label>
+                        <input id="ipt_cachaca" type="checkbox"><br> <br>
+                    </div>
+                    <button onclick="func_confirmar5()">Finalizar</button>
+                </div>
+            </div>
+        </div>
 
 
         </div>
@@ -162,7 +184,7 @@
 
     var quantPessoas = 0;
 
-    function func_confirmar() {
+    function func_confirmar1() {
 
         quantPessoas = Number(ipt_quantPessoas.value);
 
@@ -176,6 +198,7 @@
             display_parte2.style.display = 'block'
             display_parte3.style.display = 'none'
             display_parte4.style.display = 'none'
+            display_parte5.style.display = 'none'
 
         }
 
@@ -225,6 +248,7 @@
         display_parte2.style.display = 'none'
         display_parte3.style.display = 'block'
         display_parte4.style.display = 'none'
+        display_parte5.style.display = 'none'
 
     }
 
@@ -234,6 +258,17 @@
         display_parte2.style.display = 'none'
         display_parte3.style.display = 'none'
         display_parte4.style.display = 'block'
+        display_parte5.style.display = 'none'
+
+    }
+
+    function func_confirmar4() {
+
+        display_parte1.style.display = 'none'
+        display_parte2.style.display = 'none'
+        display_parte3.style.display = 'none'
+        display_parte4.style.display = 'none'
+        display_parte5.style.display = 'block'
 
     }
 
