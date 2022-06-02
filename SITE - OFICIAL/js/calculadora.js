@@ -5,70 +5,54 @@ function func_confirmar1() {
     quantPessoas = Number(ipt_quantPessoas.value);
 
     if (quantPessoas <= 0) {
-
         alert('Informe a quantidade de pessoas correto - A quantidade de pessoas tem que ser acima de 0')
-
     } else {
-
         display_parte1.style.display = 'none'
         display_parte2.style.display = 'block'
         display_parte3.style.display = 'none'
         display_parte4.style.display = 'none'
         display_parte5.style.display = 'none'
         // display_parte6.style.display = 'none'
-
-
     }
-
 }
 
 function func_boi() {
-
     boi.style.display = 'block'
     porco.style.display = 'none'
     frango.style.display = 'none'
     linguicaOutros.style.display = 'none'
-
 }
 
 function func_porco() {
-
     boi.style.display = 'none'
     porco.style.display = 'block'
     frango.style.display = 'none'
     linguicaOutros.style.display = 'none'
-
 }
 
 function func_frango() {
-
     boi.style.display = 'none'
     porco.style.display = 'none'
     frango.style.display = 'block'
     linguicaOutros.style.display = 'none'
-
 }
 
 function func_linguica() {
-
     boi.style.display = 'none'
     porco.style.display = 'none'
     frango.style.display = 'none'
     linguicaOutros.style.display = 'block'
-
 }
 
 var alcatra, picanha, maminha, fraldinha, contrafile, pernil, lombo, panceta, picanhaSuina, costelinha, coxinhaAsa, coracao, asa, linguicaChurrasco, linguicaToscana, queijoCoalho, salsichao, paoAlho = 0;
 
 function func_confirmar2() {
-
     display_parte1.style.display = 'none'
     display_parte2.style.display = 'none'
     display_parte3.style.display = 'block'
     display_parte4.style.display = 'none'
     display_parte5.style.display = 'none'
     // display_parte6.style.display = 'none'
-
 
     if (ipt_alcatra.checked === true) {
         alcatra = 0.048 * quantPessoas;
@@ -147,7 +131,6 @@ function func_confirmar2() {
 var arroz, maionese, vinagrete, farofa, limao = 0
 
 function func_confirmar3() {
-
     display_parte1.style.display = 'none'
     display_parte2.style.display = 'none'
     display_parte3.style.display = 'none'
@@ -174,13 +157,11 @@ function func_confirmar3() {
     if (ipt_limao.checked === true) {
         limao = 0.045 * quantPessoas;
     }
-
 }
 
 var carvao, prato, copo, guardanapo, talheres, salGrosso = 0;
 
 function func_confirmar4() {
-
     display_parte1.style.display = 'none'
     display_parte2.style.display = 'none'
     display_parte3.style.display = 'none'
@@ -207,7 +188,6 @@ function func_confirmar4() {
     if (ipt_salGrosso.checked === true) {
         salGrosso = 0.050 * quantPessoas;
     }
-
 }
 
 function func_confirmar5() {
@@ -218,5 +198,4 @@ function func_confirmar5() {
     display_parte4.style.display = 'none'
     display_parte5.style.display = 'none'
     // display_parte6.style.display = 'block'
-
 }
