@@ -12,7 +12,7 @@ function func_confirmar1() {
         display_parte3.style.display = 'none'
         display_parte4.style.display = 'none'
         display_parte5.style.display = 'none'
-        // display_parte6.style.display = 'none'
+        display_parte6.style.display = 'none'
     }
 }
 
@@ -52,7 +52,7 @@ function func_confirmar2() {
     display_parte3.style.display = 'block'
     display_parte4.style.display = 'none'
     display_parte5.style.display = 'none'
-    // display_parte6.style.display = 'none'
+    display_parte6.style.display = 'none'
 
     if (ipt_alcatra.checked === true) {
         alcatra = 0.048 * quantPessoas;
@@ -136,7 +136,7 @@ function func_confirmar3() {
     display_parte3.style.display = 'none'
     display_parte4.style.display = 'block'
     display_parte5.style.display = 'none'
-    // display_parte6.style.display = 'none'
+    display_parte6.style.display = 'none'
 
     if (ipt_arroz.checked === true) {
         arroz = 0.070 * quantPessoas;
@@ -167,7 +167,7 @@ function func_confirmar4() {
     display_parte3.style.display = 'none'
     display_parte4.style.display = 'none'
     display_parte5.style.display = 'block'
-    // display_parte6.style.display = 'none'
+    display_parte6.style.display = 'none'
 
     if (ipt_carvao.checked === true) {
         carvao = 0.5 * quantPessoas;
@@ -198,7 +198,7 @@ function func_confirmar5() {
     display_parte3.style.display = 'none'
     display_parte4.style.display = 'none'
     display_parte5.style.display = 'none'
-    // display_parte6.style.display = 'block'
+    display_parte6.style.display = 'block'
 
     if (ipt_cerveja.checked === true) {
         cerveja = 8 * quantPessoas;
@@ -223,5 +223,7 @@ function func_confirmar5() {
     if (ipt_cachaca.checked === true) {
         cachaca = 1 * quantPessoas;
     }
+
+
 
 }
