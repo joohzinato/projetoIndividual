@@ -56,24 +56,7 @@ function func_linguica() {
 
 }
 
-var alcatra = 0;
-var picanha = 0;
-var maminha = 0;
-var fraldinha = 0;
-var contrafile = 0;
-var pernil = 0;
-var lombo = 0;
-var panceta = 0;
-var picanhaSuina = 0;
-var costelinha = 0;
-var coxinhaAsa = 0;
-var coracao = 0;
-var asa = 0;
-var linguicaChurrasco = 0;
-var linguicaToscana = 0;
-var queijoCoalho = 0;
-var salsichao = 0;
-var paoAlho = 0;
+var alcatra, picanha, maminha, fraldinha, contrafile, pernil, lombo, panceta, picanhaSuina, costelinha, coxinhaAsa, coracao, asa, linguicaChurrasco, linguicaToscana, queijoCoalho, salsichao, paoAlho = 0;
 
 function func_confirmar2() {
 
