@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/calculadora.css">
+    <script src="./js/calculadora.js"></script>
 
     <title>Churrasquinho | Calculadora</title>
 </head>
@@ -51,16 +52,26 @@
                             </div>
                             <div id="boi">
                                 <div class="opcoes">
-                                    <label for="ipt_alcatra">Alcatra</label>
-                                    <input id="ipt_alcatra" type="checkbox"> <br>
-                                    <label for="ipt_picanha">Picanha</label>
-                                    <input id="ipt_picanha" type="checkbox"> <br>
-                                    <label for="ipt_maminha">Maminha</label>
-                                    <input id="ipt_maminha" type="checkbox"> <br>
-                                    <label for="ipt_fraldinha">Fraldinha</label>
-                                    <input id="ipt_fraldinha" type="checkbox"> <br>
-                                    <label for="ipt_contrafile">Contrafilé</label>
-                                    <input id="ipt_contrafile" type="checkbox">
+                                    <div class="check">
+                                        <label for="ipt_alcatra">Alcatra</label>
+                                        <input id="ipt_alcatra" type="checkbox"> <br>
+                                    </div>
+                                    <div class="check">
+                                        <label for="ipt_picanha">Picanha</label>
+                                        <input id="ipt_picanha" type="checkbox"> <br>
+                                    </div>
+                                    <div class="check">
+                                        <label for="ipt_maminha">Maminha</label>
+                                        <input id="ipt_maminha" type="checkbox"> <br>
+                                    </div>
+                                    <div class="check">
+                                        <label for="ipt_fraldinha">Fraldinha</label>
+                                        <input id="ipt_fraldinha" type="checkbox"> <br>
+                                    </div>
+                                    <div class="check">
+                                        <label for="ipt_contrafile">Contrafilé</label>
+                                        <input id="ipt_contrafile" type="checkbox">
+                                    </div>
                                 </div>
                             </div>
                             <div id="porco" style="display: none ;">
@@ -90,16 +101,26 @@
                         </div>
                         <div id="linguicaOutros" style="display: none;">
                             <div class="opcoes">
-                                <label for="ipt_linguicaChurrasco">Linguiça para churrasco</label>
-                                <input id="ipt_linguicaChurrasco" type="checkbox"> <br>
-                                <label for="ipt_linguicaToscana">Linguiça toscana</label>
-                                <input id="ipt_linguicaToscana" type="checkbox"> <br>
-                                <label for="ipt_queijoCoalho">Queijo Coalho</label>
-                                <input id="ipt_queijoCoalho" type="checkbox"> <br>
-                                <label for="ipt_salsichao">Salsichão</label>
-                                <input id="ipt_salsichao" type="checkbox"> <br>
-                                <label for="ipt_paoAlho">Pão de Alho</label>
-                                <input id="ipt_paoAlho" type="checkbox"> <br> <br>
+                                <div class="check">
+                                    <label for="ipt_linguicaChurrasco">Linguiça para churrasco</label>
+                                    <input id="ipt_linguicaChurrasco" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_linguicaToscana">Linguiça toscana</label>
+                                    <input id="ipt_linguicaToscana" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_queijoCoalho">Queijo Coalho</label>
+                                    <input id="ipt_queijoCoalho" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_salsichao">Salsichão</label>
+                                    <input id="ipt_salsichao" type="checkbox"> <br>
+                                </div>
+                                <div class="check">
+                                    <label for="ipt_paoAlho">Pão de Alho</label>
+                                    <input id="ipt_paoAlho" type="checkbox"> <br> <br>
+                                </div>
                             </div>
                         </div>
                         <button onclick="func_confirmar2()">Próximo</button>
@@ -182,97 +203,3 @@
 </body>
 
 </html>
-
-<script>
-
-    var quantPessoas = 0;
-
-    function func_confirmar1() {
-
-        quantPessoas = Number(ipt_quantPessoas.value);
-
-        if (quantPessoas <= 0) {
-
-            alert('Informe a quantidade de pessoas correto - A quantidade de pessoas tem que ser acima de 0')
-
-        } else {
-
-            display_parte1.style.display = 'none'
-            display_parte2.style.display = 'block'
-            display_parte3.style.display = 'none'
-            display_parte4.style.display = 'none'
-            display_parte5.style.display = 'none'
-
-        }
-
-    }
-
-    function func_boi() {
-
-        boi.style.display = 'block'
-        porco.style.display = 'none'
-        frango.style.display = 'none'
-        linguicaOutros.style.display = 'none'
-
-    }
-
-    function func_porco() {
-
-        boi.style.display = 'none'
-        porco.style.display = 'block'
-        frango.style.display = 'none'
-        linguicaOutros.style.display = 'none'
-
-    }
-
-    function func_frango() {
-
-        boi.style.display = 'none'
-        porco.style.display = 'none'
-        frango.style.display = 'block'
-        linguicaOutros.style.display = 'none'
-
-    }
-
-    function func_linguica() {
-
-        boi.style.display = 'none'
-        porco.style.display = 'none'
-        frango.style.display = 'none'
-        linguicaOutros.style.display = 'block'
-
-    }
-
-
-
-    function func_confirmar2() {
-
-        display_parte1.style.display = 'none'
-        display_parte2.style.display = 'none'
-        display_parte3.style.display = 'block'
-        display_parte4.style.display = 'none'
-        display_parte5.style.display = 'none'
-
-    }
-
-    function func_confirmar3() {
-
-        display_parte1.style.display = 'none'
-        display_parte2.style.display = 'none'
-        display_parte3.style.display = 'none'
-        display_parte4.style.display = 'block'
-        display_parte5.style.display = 'none'
-
-    }
-
-    function func_confirmar4() {
-
-        display_parte1.style.display = 'none'
-        display_parte2.style.display = 'none'
-        display_parte3.style.display = 'none'
-        display_parte4.style.display = 'none'
-        display_parte5.style.display = 'block'
-
-    }
-
-</script>
