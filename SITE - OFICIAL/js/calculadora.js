@@ -190,12 +190,38 @@ function func_confirmar4() {
     }
 }
 
-function func_confirmar5() {
+var cerveja, refrigerante, agua, vodka, suco, cachaca = 0;
 
+function func_confirmar5() {
     display_parte1.style.display = 'none'
     display_parte2.style.display = 'none'
     display_parte3.style.display = 'none'
     display_parte4.style.display = 'none'
     display_parte5.style.display = 'none'
     // display_parte6.style.display = 'block'
+
+    if (ipt_cerveja.checked === true) {
+        cerveja = 8 * quantPessoas;
+    }
+
+    if (ipt_refrigerante.checked === true) {
+        refrigerante = 1 * quantPessoas;
+    }
+
+    if (ipt_agua.checked === true) {
+        agua = 1 * quantPessoas;
+    }
+
+    if (ipt_vodka.checked === true) {
+        vodka = 1 * quantPessoas;
+    }
+
+    if (ipt_suco.checked === true) {
+        suco = 1 * quantPessoas;
+    }
+
+    if (ipt_cachaca.checked === true) {
+        cachaca = 1 * quantPessoas;
+    }
+
 }
