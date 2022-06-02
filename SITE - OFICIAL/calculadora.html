@@ -122,8 +122,31 @@
                     </div>
                 </div>
 
-
+                <div id="display_parte4" style="display: none;">
+                    <div class="partes">
+                        <img class="icone" src="/img/copo-de-agua.png">
+                        <p class="texto">NÃO ESQUEÇA DOS SUPRIMENTOS</p>
+                        <div class="opcoes">
+                            <label for="ipt_carvao">Carvão </label>
+                            <input id="ipt_carvao" type="checkbox"> <br>
+                            <label for="ipt_pratos">Pratos descartáveis</label>
+                            <input id="ipt_pratos" type="checkbox"> <br>
+                            <label for="ipt_copos">Copos descartáveis</label>
+                            <input id="ipt_copos" type="checkbox"> <br>
+                            <label for="ipt_guardanapos">Guardanapos</label>
+                            <input id="ipt_guardanapos" type="checkbox"> <br>
+                            <label for="ipt_talheres">Talheres descartáveis</label>
+                            <input id="ipt_talheres" type="checkbox"> <br>
+                            <label for="ipt_salGrosso">Sal grosso</label>
+                            <input id="ipt_salGrosso" type="checkbox"> <br> <br>
+                        </div>
+                        <button onclick="func_confirmar4()">Prosseguir</button>
+                    </div>
+                </div>
             </div>
+
+
+        </div>
     </main>
 
 
@@ -152,6 +175,7 @@
             display_parte1.style.display = 'none'
             display_parte2.style.display = 'block'
             display_parte3.style.display = 'none'
+            display_parte4.style.display = 'none'
 
         }
 
@@ -200,8 +224,16 @@
         display_parte1.style.display = 'none'
         display_parte2.style.display = 'none'
         display_parte3.style.display = 'block'
+        display_parte4.style.display = 'none'
 
+    }
 
+    function func_confirmar3() {
+
+        display_parte1.style.display = 'none'
+        display_parte2.style.display = 'none'
+        display_parte3.style.display = 'none'
+        display_parte4.style.display = 'block'
 
     }
 
