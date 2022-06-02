@@ -50,77 +50,82 @@
                                 <p class="texto" onclick="func_linguica()">LINGUIÇA E OUTROS</p>
                             </div>
                             <div id="boi">
-                                <label for="ipt_alcatra">Alcatra</label>
-                                <input id="ipt_alcatra" type="checkbox"> <br>
-                                <label for="ipt_picanha">Picanha</label>
-                                <input id="ipt_picanha" type="checkbox"> <br>
-                                <label for="ipt_maminha">Maminha</label>
-                                <input id="ipt_maminha" type="checkbox"> <br>
-                                <label for="ipt_fraldinha">Fraldinha</label>
-                                <input id="ipt_fraldinha" type="checkbox"> <br>
-                                <label for="ipt_contrafile">Contrafilé</label>
-                                <input id="ipt_contrafile" type="checkbox">
+                                <div class="opcoes">
+                                    <label for="ipt_alcatra">Alcatra</label>
+                                    <input id="ipt_alcatra" type="checkbox"> <br>
+                                    <label for="ipt_picanha">Picanha</label>
+                                    <input id="ipt_picanha" type="checkbox"> <br>
+                                    <label for="ipt_maminha">Maminha</label>
+                                    <input id="ipt_maminha" type="checkbox"> <br>
+                                    <label for="ipt_fraldinha">Fraldinha</label>
+                                    <input id="ipt_fraldinha" type="checkbox"> <br>
+                                    <label for="ipt_contrafile">Contrafilé</label>
+                                    <input id="ipt_contrafile" type="checkbox">
+                                </div>
                             </div>
                             <div id="porco" style="display: none ;">
-                                <label for="ipt_pernil">Pernil</label>
-                                <input id="ipt_pernil" type="checkbox"> <br>
-                                <label for="ipt_lombo">Lombo</label>
-                                <input id="ipt_lombo" type="checkbox"> <br>
-                                <label for="ipt_panceta">Pacenta</label>
-                                <input id="ipt_panceta" type="checkbox"> <br>
-                                <label for="ipt_picanhaSuina">Picanha Suína</label>
-                                <input id="ipt_picanhaSuina" type="checkbox"> <br>
-                                <label for="ipt_costelinha">Costelinha</label>
-                                <input id="ipt_costelinha" type="checkbox">
-                            </div>
-                            <div id="frango" style="display: none;">
                                 <div class="opcoes">
-                                    <label for="ipt_coxinhaAsa">Coxinha de asa</label>
-                                    <input id="ipt_coxinhaAsa" type="checkbox"> <br>
-                                    <label for="ipt_coracao">Coração</label>
-                                    <input id="ipt_coracao" type="checkbox"> <br>
-                                    <label for="ipt_asa">Asa</label>
-                                    <input id="ipt_asa" type="checkbox">
+                                    <label for="ipt_pernil">Pernil</label>
+                                    <input id="ipt_pernil" type="checkbox"> <br>
+                                    <label for="ipt_lombo">Lombo</label>
+                                    <input id="ipt_lombo" type="checkbox"> <br>
+                                    <label for="ipt_panceta">Pacenta</label>
+                                    <input id="ipt_panceta" type="checkbox"> <br>
+                                    <label for="ipt_picanhaSuina">Picanha Suína</label>
+                                    <input id="ipt_picanhaSuina" type="checkbox"> <br>
+                                    <label for="ipt_costelinha">Costelinha</label>
+                                    <input id="ipt_costelinha" type="checkbox">
                                 </div>
                             </div>
-                            <div id="linguicaOutros" style="display: none;">
-                                <div class="opcoes">
-                                    <label for="ipt_linguicaChurrasco">Linguiça para churrasco</label>
-                                    <input id="ipt_linguicaChurrasco" type="checkbox"> <br>
-                                    <label for="ipt_linguicaToscana">Linguiça toscana</label>
-                                    <input id="ipt_linguicaToscana" type="checkbox"> <br>
-                                    <label for="ipt_queijoCoalho">Queijo Coalho</label>
-                                    <input id="ipt_queijoCoalho" type="checkbox"> <br>
-                                    <label for="ipt_salsichao">Salsichão</label>
-                                    <input id="ipt_salsichao" type="checkbox"> <br>
-                                    <label for="ipt_paoAlho">Pão de Alho</label>
-                                    <input id="ipt_paoAlho" type="checkbox"> <br> <br>
-                                </div>
-                            </div>
-                            <button onclick="func_confirmar2()">Próximo</button>
                         </div>
-                    </div>
-
-                    <div id="display_parte3" style="display: none;">
-                        <div class="partes">
-                            <img class="icone" src="/img/salada.png">
-                            <p class="texto">VOCÊ PENSOU EM ALGUM ACOMPANHAMENTO?</p>
+                        <div id="frango" style="display: none;">
                             <div class="opcoes">
-                                <label for="ipt_arroz">Arroz</label>
-                                <input id="ipt_arroz" type="checkbox"> <br>
-                                <label for="ipt_maionese">Maionese</label>
-                                <input id="ipt_maionese" type="checkbox"> <br>
-                                <label for="ipt_vinagrete">Vinagrete</label>
-                                <input id="ipt_vinagrete" type="checkbox"> <br>
-                                <label for="ipt_farofa">Farofa</label>
-                                <input id="ipt_farofa" type="checkbox"> <br>
-                                <label for="ipt_limao">Limão</label>
-                                <input id="ipt_limao" type="checkbox"> <br> <br>
+                                <label for="ipt_coxinhaAsa">Coxinha de asa</label>
+                                <input id="ipt_coxinhaAsa" type="checkbox"> <br>
+                                <label for="ipt_coracao">Coração</label>
+                                <input id="ipt_coracao" type="checkbox"> <br>
+                                <label for="ipt_asa">Asa</label>
+                                <input id="ipt_asa" type="checkbox">
                             </div>
-                            <button onclick="func_confirmar3()">Prosseguir</button>
                         </div>
+                        <div id="linguicaOutros" style="display: none;">
+                            <div class="opcoes">
+                                <label for="ipt_linguicaChurrasco">Linguiça para churrasco</label>
+                                <input id="ipt_linguicaChurrasco" type="checkbox"> <br>
+                                <label for="ipt_linguicaToscana">Linguiça toscana</label>
+                                <input id="ipt_linguicaToscana" type="checkbox"> <br>
+                                <label for="ipt_queijoCoalho">Queijo Coalho</label>
+                                <input id="ipt_queijoCoalho" type="checkbox"> <br>
+                                <label for="ipt_salsichao">Salsichão</label>
+                                <input id="ipt_salsichao" type="checkbox"> <br>
+                                <label for="ipt_paoAlho">Pão de Alho</label>
+                                <input id="ipt_paoAlho" type="checkbox"> <br> <br>
+                            </div>
+                        </div>
+                        <button onclick="func_confirmar2()">Próximo</button>
                     </div>
                 </div>
+
+                <div id="display_parte3" style="display: none;">
+                    <div class="partes">
+                        <img class="icone" src="/img/salada.png">
+                        <p class="texto">VOCÊ PENSOU EM ALGUM ACOMPANHAMENTO?</p>
+                        <div class="opcoes">
+                            <label for="ipt_arroz">Arroz</label>
+                            <input id="ipt_arroz" type="checkbox"> <br>
+                            <label for="ipt_maionese">Maionese</label>
+                            <input id="ipt_maionese" type="checkbox"> <br>
+                            <label for="ipt_vinagrete">Vinagrete</label>
+                            <input id="ipt_vinagrete" type="checkbox"> <br>
+                            <label for="ipt_farofa">Farofa</label>
+                            <input id="ipt_farofa" type="checkbox"> <br>
+                            <label for="ipt_limao">Limão</label>
+                            <input id="ipt_limao" type="checkbox"> <br> <br>
+                        </div>
+                        <button onclick="func_confirmar3()">Prosseguir</button>
+                    </div>
+                </div>
+
 
                 <div id="display_parte4" style="display: none;">
                     <div class="partes">
@@ -143,31 +148,29 @@
                         <button onclick="func_confirmar4()">Prosseguir</button>
                     </div>
                 </div>
-            </div>
-            <div id="display_parte5" style="display: none;">
-                <div class="partes">
-                    <img class="icone" src="/img/refrigerante.png">
-                    <p class="texto">QUAIS BEBIDAS DESEJA SERVIR?</p>
-                    <div class="opcoes">
-                        <label for="ipt_cerveja">Cerveja</label>
-                        <input id="ipt_cerveja" type="checkbox"> <br>
-                        <label for="ipt_refrigerante">Refrigerante</label>
-                        <input id="ipt_refrigerante" type="checkbox"> <br>
-                        <label for="ipt_agua">Água</label>
-                        <input id="ipt_agua" type="checkbox"> <br>
-                        <label for="ipt_vodka">Vodka</label>
-                        <input id="ipt_vodka" type="checkbox"> <br>
-                        <label for="ipt_suco">Suco</label>
-                        <input id="ipt_suco" type="checkbox"> <br>
-                        <label for="ipt_cachaca">Cachaça</label>
-                        <input id="ipt_cachaca" type="checkbox"><br> <br>
+
+                <div id="display_parte5" style="display: none;">
+                    <div class="partes">
+                        <img class="icone" src="/img/refrigerante.png">
+                        <p class="texto">QUAIS BEBIDAS DESEJA SERVIR?</p>
+                        <div class="opcoes">
+                            <label for="ipt_cerveja">Cerveja</label>
+                            <input id="ipt_cerveja" type="checkbox"> <br>
+                            <label for="ipt_refrigerante">Refrigerante</label>
+                            <input id="ipt_refrigerante" type="checkbox"> <br>
+                            <label for="ipt_agua">Água</label>
+                            <input id="ipt_agua" type="checkbox"> <br>
+                            <label for="ipt_vodka">Vodka</label>
+                            <input id="ipt_vodka" type="checkbox"> <br>
+                            <label for="ipt_suco">Suco</label>
+                            <input id="ipt_suco" type="checkbox"> <br>
+                            <label for="ipt_cachaca">Cachaça</label>
+                            <input id="ipt_cachaca" type="checkbox"><br> <br>
+                        </div>
+                        <button onclick="func_confirmar5()">Finalizar</button>
                     </div>
-                    <button onclick="func_confirmar5()">Finalizar</button>
                 </div>
             </div>
-        </div>
-
-
         </div>
     </main>
 
