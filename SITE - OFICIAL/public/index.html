@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Churrasquinho</title>
+</head>
+
+<body>
+    <header>
+        <p><a href="index.html">CHURRASQUINHO</a></p>
+        <ul>
+            <li><a href="./index.html#">Home</a></li>
+            <li><a href="./index.html#historia">História</a></li>
+            <li><a href="./index.html#sobre">Sobre</a></li>
+            <li><a href="./calculadora.html">Calculadora</a></li>
+            <li><a href="./topChurrasco.html">Votação</a></li>
+            <li>|</li>
+            <li><a href="./index.html#cadastrar">Cadastrar</a></li>
+        </ul>
+    </header>
+
+
+    <div class="banner">
+        <p>CHURRASQUINHO EM FAMÍLIA</p>
+    </div>
+
+    <main>
+        <div id="historia">
+            <div class="container">
+                <h1 class="titulo">HISTÓRIA</h1>
+
+                <p class="texto"> Ninguém tem certeza de onde o termo churrasco se originou. Há algumas teorias, uma
+                    delas é que os espanhóis, ao desembarcarem no Caribe, usaram a palavra barbacoa para se referir
+                    ao método dos nativos de cozinhar carne lentamente sobre uma plataforma de madeira; a outra
+                    é que churrasco tem origem na palavra basca, Sukarra: su (fogo) e karra (chama).
+                    <br>
+                    No Brasil, a cultura nasceu graças aos tropeiros, que em meados do século XVII, perceberam que o
+                    gado usado para o transporte poderia ser uma fonte fácil de alimento.
+                    <br>
+                    Com o preparo fácil, pois temperavam apenas com o sal e assavam diretamente no fogo, esse
+                    costume rapidamente se popularizou.
+                    <br>
+                    A paixão pelo churrasco não é exclusividade do brasileiro. Outros países também têm como costume
+                    reunir os amigos em volta do fogo, como na Africa do Sul, onde o churrasco é considerado por
+                    eles um estilo de vida. Cada país faz churrasco em seu próprio estilo. O churrasco coreano
+                    apresenta fatias finas de carne bovina ou de porco cozida e é servida com arroz. Na Argentina a
+                    carne é cozida em um buraco sem fumaça. E, claro, há churrasco mongol, que não é churrasco nem
+                    de origem mongol, mas sim um tipo de fritura recentemente inventada em Taiwan.Nos encontros
+                    sociais, os homens são os responsáveis por grelhar a carne e as mulheres, pelas saladas e
+                    sobremesas.
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <div id="sobre">
+            <div class="container">
+                <h1 class="titulo">MINHA RELAÇÃO COM O CHURRASCO</h1>
+
+                <div class="card_sobre">
+                    <p class="texto">
+                        O churrasco tradicional brasileiro é uma comida típica que remete muito à reuniões com a família
+                        e amigos. Como são pessoas de extrema importância para mim, o churrasco automaticamente se
+                        tornou importante também. <br>
+                        Estar junto com a família e amigos aproveitando o que há de melhor, é uma das coisas que eu mais
+                        gosto de vivenciar, devido a grande importância que cada um tem na minha vida. E, para
+                        presenciar tudo isso, juntamente com todos, não poderia faltar o churrasco como prato principal,
+                        com sua forma única e deliciosa para essas reuniões que me fazem extremamente bem. <br>
+                        Minha família tem o costume de fazer churrascos para reunir todos os parentes desde a minha
+                        infância, com isso guardei diversas lembranças incríveis que até hoje me trazem conforto só de
+                        lembrar. O churrasco em família é um costume que com certeza manterei até o fim, passando para
+                        os meus filhos e netos, garantindo que faça parte das gerações futuras de minha família.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="cadastrar">
+            <div class="container">
+                <h1 class="titulo">SAIBA MAIS SOBRE O CHURRASCO</h1>
+
+                <div id="card_cadastrar">
+                    <p class="texto">Informe o seu nome: </p>
+                    <input type="text" class="ipts_cadastrar" id="ipt_nome">
+                    <p class="texto">Informe o seu email: </p>
+                    <input type="text" class="ipts_cadastrar" id="ipt_email">
+                    <button onclick="cadastrar()">Registrar</button>
+                </div>
+
+                <div id="card_votacao" style="display: none;">
+
+                    <label for="ipt_carne">Carne</label>
+                    <input type="radio" name="sel_pref" id="ipt_carne"> <br>
+                    <label for="ipt_linguica">Linguiça</label>
+                    <input type="radio" name="sel_pref" id="ipt_linguica"> <br>
+                    <label for="ipt_frango">Frango</label>
+                    <input type="radio" name="sel_pref" id="ipt_frango"> <br><br>
+                    <button onclick="votacao()">Confirmar voto</button>
+                    <button onclick="func_mostrarVotos()">Mostrar votos</button> <br><br>
+
+                    <span id="mensagem"></span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p id="p_flooter">Feito por: João Víctor Zinatto Sobral <br> SPTech - Projeto Individual - 1º semestre</p>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+
+    var id = 0
+
+    function cadastrar() {
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = ipt_nome.value;
+        var emailVar = ipt_email.value;
+
+        if (nomeVar == "" || emailVar == "") {
+
+            alert("Mensagem de erro para todos os campos em branco");
+
+            return false;
+        }
+        else {
+            setInterval(5000)
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            alert("Ops, e-mail inválido! Verifique e tente novamente.")
+
+            return false;
+        }
+        else {
+            setInterval(5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+
+
+                alert("Cadastro realizado com sucesso! Vote no que você mais gosta de comer no churrasco!");
+                card_votacao.style.display = 'block'
+                card_cadastrar.style.display = 'none'
+                console.log('passei por aqui votação')
+                resposta.json().then(json => { id = json.insertId })
+
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+            return resposta
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+
+
+    function votacao(carne, linguica, frango, idUsuario) {
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+
+        if (ipt_carne.checked === false && ipt_linguica.checked === false && ipt_frango.checked === false) {
+
+            alert("Mensagem de erro para todos os campos em branco");
+
+            return false;
+        }
+        else {
+
+            if (ipt_carne.checked === true) {
+
+                carne = true
+
+
+            } else if (ipt_carne.checked === false) {
+
+                carne = false
+
+
+            }
+
+            if (ipt_linguica.checked === true) {
+
+                linguica = true
+
+
+            } else if (ipt_linguica.checked === false) {
+
+                linguica = false
+
+
+            }
+
+            if (ipt_frango.checked === true) {
+
+                frango = true
+
+
+            } else if (ipt_frango.checked === false) {
+
+                frango = false
+
+
+            }
+            idUsuario = id
+            setInterval(5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/votacao", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                idUsuarioServer: idUsuario,
+                carneServer: carne,
+                linguicaServer: linguica,
+                frangoServer: frango
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+
+
+                alert("Votação feita com sucesso!");
+
+
+
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+
+    }
+
+</script>

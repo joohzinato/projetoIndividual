@@ -16,14 +16,16 @@
     <header>
         <p><a href="index.html">CHURRASQUINHO</a></p>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="./index.html#">Home</a></li>
             <li><a href="./index.html#historia">História</a></li>
             <li><a href="./index.html#sobre">Sobre</a></li>
-            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="./calculadora.html">Calculadora</a></li>
+            <li><a href="./topChurrasco.html">Votação</a></li>
             <li>|</li>
-            <li><a href="./index.html#cadastrar">Saiba mais</a></li>
+            <li><a href="./index.html#cadastrar">Cadastrar</a></li>
         </ul>
     </header>
+
 
     <main>
         <div id="calculadora">
@@ -33,7 +35,7 @@
 
                     <div id="display_parte1" style="display: block;">
                         <div class="partes">
-                            <img class="icone" src="/img/pessoa.png">
+                            <img class="icone" src="./assets/imgs/calculadora.png">
                             <p class="texto">QUANTAS PESSOAS VÃO AO CHURRASCO?</p>
                             <input type="text" id="ipt_quantPessoas">
                             <button class="buttonCalculadora" onclick="func_confirmar1()">Próximo</button>
@@ -42,7 +44,7 @@
 
                     <div id="display_parte2" style="display: none;">
                         <div class="partes">
-                            <img class="icone" src="/img/carne.png">
+                            <img class="icone" src="./assets/imgs/carne.png">
                             <p class="texto">QUAIS CARNES SERÃO SERVIDAS?</p>
                             <div id="op_carnes">
                                 <p class="texto" onclick="func_boi()">BOI</p>
@@ -146,7 +148,7 @@
 
                     <div id="display_parte3" style="display: none;">
                         <div class="partes">
-                            <img class="icone" src="/img/salada.png">
+                            <img class="icone" src="./assets/imgs/salada.png">
                             <p class="texto">VOCÊ PENSOU EM ALGUM ACOMPANHAMENTO?</p>
                             <div class="opcoes">
                                 <div class="check">
@@ -176,7 +178,7 @@
 
                     <div id="display_parte4" style="display: none;">
                         <div class="partes">
-                            <img class="icone" src="/img/copo-de-agua.png">
+                            <img class="icone" src="./assets/imgs/copo-de-agua.png">
                             <p class="texto">NÃO ESQUEÇA DOS SUPRIMENTOS</p>
                             <div class="opcoes">
                                 <div class="check">
@@ -210,7 +212,7 @@
 
                     <div id="display_parte5" style="display: none;">
                         <div class="partes">
-                            <img class="icone" src="/img/refrigerante.png">
+                            <img class="icone" src="./assets/imgs/refrigerante.png">
                             <p class="texto">QUAIS BEBIDAS DESEJA SERVIR?</p>
                             <div class="opcoes">
                                 <div class="check">
@@ -242,9 +244,9 @@
                         </div>
                     </div>
 
-                    <div class="display_parte6" style="display: none;">
+                    <div id="display_parte6" style="display: none;">
                         <div class="partes">
-                            <img class="icone" src="/img/relatorio.png">
+                            <img class="icone" src="./assets/imgs/relatorio.png">
                             <p class="texto">RELATÓRIO</p>
                             <div id="div_mensagem"></div>
                         </div>

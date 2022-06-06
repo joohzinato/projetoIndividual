@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Churrasquinho</title>
+</head>
+
+<body>
+    <header>
+        <p><a href="index.html">CHURRASQUINHO</a></p>
+        <ul>
+            <li><a href="./index.html#">Home</a></li>
+            <li><a href="./index.html#historia">História</a></li>
+            <li><a href="./index.html#sobre">Sobre</a></li>
+            <li><a href="./calculadora.html">Calculadora</a></li>
+            <li><a href="./topChurrasco.html">Votação</a></li>
+            <li>|</li>
+            <li><a href="./index.html#cadastrar">Cadastrar</a></li>
+        </ul>
+    </header>
+
+    <main>
+
+        <div id="cadastrar">
+            <div class="container">
+                <h1 class="titulo">RESULTADO VOTAÇÕES</h1>
+
+                <div id="card_cadastrar">
+                    <p class="texto">Quantidade de votos: <b class="texto" id="quantVotosTotal"></b></p>
+                    <p class="texto">Quantidade que gostam de Carne: <b class="texto" id="quantVotosCarne">0</b> pessoas</p>
+                    <p class="texto">Quantidade que gostam de Linguiça: <b class="texto" id="quantVotosLinguica">0</b> pessoas</p>
+                    <p class="texto">Quantidade que gostam de Frango: <b class="texto" id="quantVotosFrango">0</b> pessoas</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <p id="p_flooter">Feito por: João Víctor Zinatto Sobral <br> SPTech - Projeto Individual - 1º semestre</p>
+    </footer>
+
+
+</body>
+
+
+<script>
+
+    var lista = []
+    listar()
+
+    function listar() {
+        fetch("/usuarios/listar", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO listar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+                resposta.json().then(json => {
+                    console.log(json);
+                    // console.log(JSON.stringify(json));
+                    lista = [];
+
+                    for (let i = 0; i < json.length; i++) {
+                        lista.push(json[i]);
+                        console.log(`cadastro ${i}`)
+                        // o nome de cada botao retorna assim
+                        console.log(lista[i])
+                    }
+                    mostrar()
+                });
+            } else {
+                console.log("Houve um erro ao tentar realizar o listar!");
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    carneTop = 0
+    linguicaTop = 0
+    frangoTop = 0
+    totalTop = 0
+
+
+    function mostrar() {
+
+        for (let index = 0; index < lista.length; index++) {
+
+            if (lista[index].carne == 1) {
+
+                carneTop++
+                quantVotosCarne.innerHTML = (`${carneTop}`)
+
+            }
+
+            if (lista[index].linguica == 1) {
+
+                linguicaTop++
+                quantVotosLinguica.innerHTML = (`${linguicaTop}`)
+
+            }
+
+            if (lista[index].frango == 1) {
+
+                frangoTop++
+                quantVotosFrango.innerHTML = (`${frangoTop}`)
+
+            }
+
+            totalTop++
+            quantVotosTotal.innerHTML = (`${totalTop}`)
+
+        }
+
+    }
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,63 @@
+/* CADASTRO */
+
+#cadastro {
+    background-color: #F2A81D;
+
+}
+
+#cadastro h1 {
+    color: #59100A;
+}
+
+
+#cadastro .texto {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.ipt_cadastro {
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#cadastro button {
+    margin-top: 3px;
+    border-radius: 20px;
+}
+
+/* LOGIN */
+
+/* CADASTRO */
+
+#login {
+    background-color: #F2A81D;
+    padding-bottom: 97px;
+
+}
+
+#login h1 {
+    color: #59100A;
+    margin-top: 100px;
+}
+
+
+#login .texto {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.ipt_login {
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#login button {
+    margin-top: 3px;
+    border-radius: 20px;
+}
+
+
+
+

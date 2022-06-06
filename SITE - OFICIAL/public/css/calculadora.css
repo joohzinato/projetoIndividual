@@ -1,0 +1,62 @@
+/* CALCULADORA */
+
+#calculadora {
+    background-color: #F2A81D;
+}
+
+#calculadora h1 {
+    color: #59100A;
+}
+
+/* GLOBAIS */
+
+#calculadora .texto {
+    color: black;
+}
+
+#calculadora .icone {
+    width: 14.641288433382138vw
+}
+
+#calculadora .opcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 1200px;
+}
+
+#calculadora .check {
+
+    font-size: 20px;
+
+}
+
+#calculadora .partes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calculadora .buttonCalculadora {
+    margin-top: 20px;
+
+}
+
+/* CARNES */
+
+#op_carnes {
+    width: 800px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+
+#ipts_calculadora {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+}

@@ -225,5 +225,91 @@ function func_confirmar5() {
     }
 
 
+    // TEXTOS PARA RELATÓRIO
+    
+    if (ipt_alcatra.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Alcatra:</b> ${alcatra.toFixed(2)}Kg // Por pessoa: ${alcatra.toFixed(2) / quantPessoas}Kg   <br>`;
+
+    } 
+
+    if (ipt_picanha.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Picanha:</b> ${picanha.toFixed(2)}Kg Por pessoa: ${picanha.toFixed(2) / quantPessoas}Kg   <br>`;
+
+    }
+
+    if (ipt_maminha.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Maminha:</b> ${maminha.toFixed(2)}Kg // Por pessoa: ${maminha.toFixed(2) / quantPessoas}Kg   <br>`;
+
+    }
+
+    if (ipt_fraldinha.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Fraldinha:</b> ${fraldinha.toFixed(2)}Kg // Por pessoa: ${fraldinha.toFixed(2) / quantPessoas}Kg   <br>`;
+
+    }
+
+    if (ipt_contrafile.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Contrafilé:</b> ${contrafile.toFixed(2)}Kg // Por pessoa: ${contrafile.toFixed(2) / quantPessoas}Kg   <br>`;
+
+    }
+
+    if (ipt_pernil.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Pernil:</b> ${pernil.toFixed(2)}Kg // Por pessoa: ${pernil.toFixed(2) / quantPessoas}Kg   <br>`;
+
+    }
+
+    if (ipt_lombo.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Lombo:</b> ${lombo.toFixed(2)}Kg // Por pessoa: ${lombo.toFixed(2) / quantPessoas}Kg   <br>`;
+
+    }
+
+    if (ipt_panceta.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Pacenta:</b> ${panceta.toFixed(2)}Kg // Por pessoa: ${panceta.toFixed(2) / quantPessoas}Kg   <br>`;
+
+    }
+
+    if (ipt_picanhaSuina.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Picanha Suína:</b> ${picanhaSuina.toFixed(2)}Kg // Por pessoa: ${picanhaSuina.toFixed(2) / quantPessoas}Kg   <br>`;
+
+    }
+
+    if (ipt_costelinha.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Costelinha:</b> ${costelinha.toFixed(2)}Kg // Por pessoa: ${(costelinha / quantPessoas).toFixed(2)}Kg   <br>`;
+
+    }
+
+    if (ipt_coxinhaAsa.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Coxinha de Asa:</b> ${coxinhaAsa.toFixed(2)}Kg // Por pessoa: ${(coxinhaAsa / quantPessoas).toFixed(2)}Kg   <br>`;
+
+
+    }
+
+    if (ipt_coracao.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Coração:</b> ${coracao.toFixed(2)}Kg // Por pessoa: ${(coracao / quantPessoas).toFixed(2)}Kg   <br>`;
+
+
+    }
+
+    if (ipt_asa.checked === true) {
+
+        div_mensagem.innerHTML += `<b>Asa:</b> ${asa.toFixed(2)}Kg // Por pessoa: ${(asa / quantPessoas).toFixed(2)}Kg   <br>`;
+
+
+    }
+
+
+
+
 
 }
