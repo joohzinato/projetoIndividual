@@ -25,18 +25,16 @@ function listar(req, res) {
 }
 
 function cadastrar(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
 
-    // Faça as validações dos valores
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else {
         
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.cadastrar(nome, email)
             .then(
                 function (resultado) {
@@ -56,18 +54,16 @@ function cadastrar(req, res) {
 }
 
 function votacao(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+
     var idUsuario = req.body.idUsuarioServer;
     var carne = req.body.carneServer;
     var linguica = req.body.linguicaServer;
     var frango = req.body.frangoServer
 
-    // Faça as validações dos valores
     if (carne == undefined || linguica == undefined || frango == undefined) {
         res.status(400).send("Selecione uma opção");
     } else {
         
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.votacao(carne, linguica, frango, idUsuario)
             .then(
                 function (resultado) {

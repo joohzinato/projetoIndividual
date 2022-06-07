@@ -87,7 +87,7 @@ a {
 }
 
 .container p {
-    font-size: 30px;
+    font-size: 28px;
     color: #F27B13;
 }
 
@@ -99,7 +99,7 @@ a {
 .texto {
 
     color: rgb(241, 230, 230);
-    text-align: justify;
+    text-align: left;
     font-weight: 300;
 }
 
@@ -118,6 +118,19 @@ a {
 
 #historia .texto {
     color: rgb(241, 230, 230);
+}
+
+.imagens {
+    width: 400px;
+    margin: 15px;
+    border: 3px solid #F27B13;
+
+}
+
+.imagensHistoria {
+    display: flex;
+    justify-content: space-evenly;
+
 }
 
 /* SOBRE */
@@ -151,13 +164,19 @@ a {
 #cadastrar .texto {
     color: white;
     font-size: 20px;
-    /* font-weight: 600; */
-
 }
 
 .ipts_cadastrar {
     background-color: #59100A;
-    border: 1px solid black;
+    border: transparent;
+    border-bottom: 1px solid black;
+    color: white;
+}
+
+#card_votacao .labelVotacao {
+    color: white;
+    font-size: 20px;
+
 }
 
 /* FOOTER */

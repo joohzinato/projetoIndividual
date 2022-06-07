@@ -23,7 +23,6 @@
         </ul>
     </header>
 
-
     <div class="banner">
         <p>CHURRASQUINHO EM FAMÍLIA</p>
     </div>
@@ -31,14 +30,11 @@
     <main>
         <div id="historia">
             <div class="container">
-                <h1 class="titulo">HISTÓRIA</h1>
+                <h1 class="titulo">CHURRASCO BRASILEIRO</h1>
 
-                <p class="texto"> Ninguém tem certeza de onde o termo churrasco se originou. Há algumas teorias, uma
-                    delas é que os espanhóis, ao desembarcarem no Caribe, usaram a palavra barbacoa para se referir
-                    ao método dos nativos de cozinhar carne lentamente sobre uma plataforma de madeira; a outra
-                    é que churrasco tem origem na palavra basca, Sukarra: su (fogo) e karra (chama).
-                    <br>
-                    No Brasil, a cultura nasceu graças aos tropeiros, que em meados do século XVII, perceberam que o
+                <p class="texto">
+                    No Brasil, a cultura do churrasco nasceu graças aos tropeiros, que em meados do século XVII,
+                    perceberam que o
                     gado usado para o transporte poderia ser uma fonte fácil de alimento.
                     <br>
                     Com o preparo fácil, pois temperavam apenas com o sal e assavam diretamente no fogo, esse
@@ -49,10 +45,14 @@
                     eles um estilo de vida. Cada país faz churrasco em seu próprio estilo. O churrasco coreano
                     apresenta fatias finas de carne bovina ou de porco cozida e é servida com arroz. Na Argentina a
                     carne é cozida em um buraco sem fumaça. E, claro, há churrasco mongol, que não é churrasco nem
-                    de origem mongol, mas sim um tipo de fritura recentemente inventada em Taiwan.Nos encontros
+                    de origem mongol, mas sim um tipo de fritura recentemente inventada em Taiwan. Nos encontros
                     sociais, os homens são os responsáveis por grelhar a carne e as mulheres, pelas saladas e
                     sobremesas.
                     <br>
+                <div class="imagensHistoria">
+                    <img src="./assets/imgs/espetinhos.jpg" alt="espetinhos" class="imagens">
+                    <img src="./assets/imgs/churrascaria.jpg" alt="churrascaria" class="imagens">
+                </div>
                 </p>
             </div>
         </div>
@@ -74,6 +74,12 @@
                         infância, com isso guardei diversas lembranças incríveis que até hoje me trazem conforto só de
                         lembrar. O churrasco em família é um costume que com certeza manterei até o fim, passando para
                         os meus filhos e netos, garantindo que faça parte das gerações futuras de minha família.
+                        <br>
+                    <div class="imagensHistoria">
+                        <img src="./assets/imgs/fotoFamilia1.jpg" alt="Família Imagem 1" class="imagens">
+                        <img src="./assets/imgs/fotoFamilia2.jpg" alt="Família Imagem 2" class="imagens">
+                    </div>
+
                     </p>
                 </div>
             </div>
@@ -93,16 +99,20 @@
 
                 <div id="card_votacao" style="display: none;">
 
-                    <label for="ipt_carne">Carne</label>
+                    <label for="ipt_carne" class="labelVotacao">Carne</label>
                     <input type="radio" name="sel_pref" id="ipt_carne"> <br>
-                    <label for="ipt_linguica">Linguiça</label>
+                    <label for="ipt_linguica" class="labelVotacao" >Linguiça</label>
                     <input type="radio" name="sel_pref" id="ipt_linguica"> <br>
-                    <label for="ipt_frango">Frango</label>
+                    <label for="ipt_frango" class="labelVotacao">Frango</label>
                     <input type="radio" name="sel_pref" id="ipt_frango"> <br><br>
                     <button onclick="votacao()">Confirmar voto</button>
-                    <button onclick="func_mostrarVotos()">Mostrar votos</button> <br><br>
-
                     <span id="mensagem"></span>
+                </div>
+
+                <div id="card_votacaoFinalizada" style="display: none;">
+
+                    <p class="texto">Obrigado por votar! Visite os resultados <a href="./topChurrasco.html">clicando
+                            aqui!</a> </p>
                 </div>
             </div>
         </div>
@@ -186,9 +196,6 @@
 
     function votacao(carne, linguica, frango, idUsuario) {
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
-
         if (ipt_carne.checked === false && ipt_linguica.checked === false && ipt_frango.checked === false) {
 
             alert("Mensagem de erro para todos os campos em branco");
@@ -201,12 +208,9 @@
 
                 carne = true
 
-
             } else if (ipt_carne.checked === false) {
 
                 carne = false
-
-
             }
 
             if (ipt_linguica.checked === true) {
@@ -217,7 +221,6 @@
             } else if (ipt_linguica.checked === false) {
 
                 linguica = false
-
 
             }
 
@@ -230,21 +233,23 @@
 
                 frango = false
 
-
             }
+
             idUsuario = id
+
+            card_votacaoFinalizada.style.display = 'block'
+            card_votacao.style.display = 'none'
+
             setInterval(5000)
         }
 
-        // Enviando o valor da nova input
         fetch("/usuarios/votacao", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
+
                 idUsuarioServer: idUsuario,
                 carneServer: carne,
                 linguicaServer: linguica,
@@ -259,8 +264,6 @@
 
 
                 alert("Votação feita com sucesso!");
-
-
 
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");

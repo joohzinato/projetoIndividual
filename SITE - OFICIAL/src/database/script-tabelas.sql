@@ -13,14 +13,31 @@ email varchar(45)
 );
 
 create table votacao (
-idVotacao int primary key auto_increment,
+idVotacao int auto_increment,
 carne tinyint,
 linguica tinyint,
 frango tinyint,
 fkUsuario int,
-foreign key (fkUsuario) references usuario(id)
+foreign key (fkUsuario) references usuario(id),
+primary key (idVotacao, fkUsuario)
 );
 
 select nome, email, carne, frango, linguica from usuario
 	join votacao
 		on fkUsuario = id;
+        
+select count(idVotacao) as 'Quantidade de votos', 
+		(select count(carne) from usuario
+			join votacao
+				on fkUsuario = id
+					where carne = true) as 'Quantidade que gostam de Carne' ,
+		(select count(linguica) from usuario
+			join votacao
+				on fkUsuario = id
+					where linguica = true) as 'Quantidade que gostam de Linguiça', 
+		(select count(frango) from usuario
+			join votacao
+				on fkUsuario = id
+					where frango = true) as 'Quantidade que gostam de Frango' from usuario
+						join votacao
+							on fkUsuario = id;
